@@ -48,6 +48,12 @@ class MyApp extends StatelessWidget {
                 elevation: 10,
               ),
             ),
+            Card(child: Column(
+              children:<Widget> [
+
+              ],
+            ),
+            ),
             Column(children: transactions.map((tx) {
               return Card(
                   child: Row(
