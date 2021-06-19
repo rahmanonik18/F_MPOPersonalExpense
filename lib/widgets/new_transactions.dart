@@ -3,8 +3,12 @@ import '../model/transaction.dart';
 
 class NewTransaction extends StatelessWidget {
 
-  final titleController =  TextEditingController();
+  final Function addTx;
+  final titleController = TextEditingController();
   final amountController = TextEditingController();
+
+  NewTransaction(this.addTx);
+
   @override
   Widget build(BuildContext context) {
     return  Card(
