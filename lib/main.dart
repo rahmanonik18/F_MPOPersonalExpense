@@ -1,8 +1,6 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import './widgets/user_transactions.dart';
-import './widgets/chart_list.dart';
 
 
 main() {
@@ -21,12 +19,21 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Personal Expenses'),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children:<Widget> [
-            ChartList(),
-            UserTransactions(),
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children:<Widget> [
+              Container(
+                  width: double.infinity,
+                  child: Card(
+                    color: Colors.lightBlueAccent,
+                    child: Text("Chart !"),
+                    elevation: 10,
+                  ),
+              )  ,
+              UserTransactions(),
+            ],
+          ),
         ),
       ),
     );
