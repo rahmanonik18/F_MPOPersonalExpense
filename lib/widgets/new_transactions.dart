@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class NewTransaction extends StatelessWidget {
+
   final Function addTx;
   final titleController = TextEditingController();
   final amountController = TextEditingController();
@@ -12,14 +13,11 @@ class NewTransaction extends StatelessWidget {
 
     final enteredtitle = titleController.text;
     final enteredamount = double.parse(amountController.text);
-
     if (enteredtitle.isEmpty || enteredamount <0) {
       return;
     }
-
     addTx(enteredtitle, enteredamount);
   }
-
   @override
   Widget build(BuildContext context) {
     return Card(
